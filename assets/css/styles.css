@@ -1,27 +1,65 @@
+:root {
+    --purple: rgb(232, 102, 236);
+    --whiteish: #E0EAE5;
+    --charcoal: #333940;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
 body {
-    
+    background-color: var(--charcoal);
+    color: var(--purple);
+    display: flex;
+    flex-direction: column; /* set the body flow as top to bottom */
+    max-width: 960px; /* Set max width to then center page with margin; tip via W3C Schools */
+    margin: auto;
+}
+main{
+    display: flex;
+    flex-flow: row wrap; /* set the main class flow as left to right */
 }
 
 header h1 {
-
+    color: var(--purple);
+    text-align: center;
 }
 
 header p {
-
+    color: var(--whiteish);
 }
 
 .dotted-box {
-
+    border: 1px dotted var(--whiteish);
+    padding: 5px 10px;
+    margin: 10px 10px 20px 0;
+    width: 30%;
 }
 
+ .dotted-box > p {  /* target direct p child of dotted box but leave other p descendants alone */
+    font-size: smaller;
+}
 .section-header {
+    border: 1px solid var(--whiteish);
+    border-radius: 8px;  /* add rounding to box corners */
+    width: 90%;
+    margin: auto;
+    padding: 3px;
+    position: relative;
+    margin-top: -20px;
+    background-color: var(--charcoal);
+    align-items: center;
 
 }
 
-.css-code-box {
-
+.css-code-box p {
+    border-radius: 8px;  /* add rounding to box corners */
+    font-family: monospace;
+    color: var(--whiteish);
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%); /* add gradient to color */
+    padding: 3px;
 }
 
 footer p {
-
+text-align: center;
+font-size: larger;
 }
